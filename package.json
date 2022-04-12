@@ -1,6 +1,6 @@
 {
   "name": "vastai-dva",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple and lightweight and elm-style framework with minimal API and zero boilerplate",
   "keywords": [
     "dva",
@@ -10,11 +10,11 @@
   ],
   "license": "MIT",
   "author": "1334196450@qq.com",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
   "module": "./esm/index.js",
-  "typings": "types/index.d.ts",
+  "typings": "./types/index.d.ts",
   "files": [
-    "lib",
+    "dist",
     "esm",
     "types"
   ],
@@ -24,7 +24,7 @@
     "coverage": "rimraf coverage && jest --config ./jest.config.js --coverage",
     "build:types": "rimraf types && tsc --outFile types/index.d.ts -d --emitDeclarationOnly",
     "build:es": "rimraf esm && mx buildLib --mode esm --less-2-css --copy-less",
-    "build:umd": "rimraf dist && mx buildLib --output-name vastai-dva --mode umd",
+    "build:umd": "rimraf dist && mx buildLib --output-name index --mode umd",
     "build": "yarn build:types && yarn build:es && yarn build:umd",
     "release": "ts-node ./scripts/release.ts"
   },
