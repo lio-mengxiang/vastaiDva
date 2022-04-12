@@ -9,12 +9,12 @@ import {
 } from '@mx-design/release';
 
 const middle = [
-  // eslint(),
-  // getNextVersion,
-  // updateVersion,
+  eslint(),
+  getNextVersion,
+  updateVersion,
   gitPush,
-  // build,
-  // publishNpm,
+  build,
+  publishNpm,
 ];
 
 compose(middle);

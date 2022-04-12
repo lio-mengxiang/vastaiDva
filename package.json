@@ -1,22 +1,20 @@
 {
-  "name": "@mx-design/cli-template",
-  "version": "1.0.2",
-  "description": "Cli Tools for mx Design Project",
+  "name": "vastai-dva",
+  "version": "1.0.3",
+  "description": "A simple and lightweight and elm-style framework with minimal API and zero boilerplate",
   "keywords": [
-    "mx-cli",
-    "react cli",
-    "webpack pack cli",
-    "react library pack cli"
+    "dva",
+    "mini dva",
+    "mini redux",
+    "sample redux"
   ],
   "license": "MIT",
   "author": "1334196450@qq.com",
   "typings": "types/index.d.ts",
-  "bin": {
-    "mx": "./bin/index.js"
-  },
   "files": [
     "lib",
-    "bin",
+    "esm",
+    "dist",
     "types"
   ],
   "scripts": {
