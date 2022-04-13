@@ -22,7 +22,7 @@ class VastaiDva {
   _models: IModel[];
 
   // createStore的结果
-  store: Store | {};
+  store: Store;
 
   // 额外需要加载的plugin
   plugin: Plugin;
@@ -31,7 +31,6 @@ class VastaiDva {
 
   constructor(plugin: Plugin) {
     this._models = [];
-    this.store = {};
     this.effects = {};
     this.plugin = plugin;
   }
@@ -132,4 +131,5 @@ const plugin = new Plugin();
 const VastaiDvaInstance = new VastaiDva(plugin);
 VastaiDvaInstance.plugin.use(loadingPlugin());
 
+export { IModel };
 export default VastaiDvaInstance;
