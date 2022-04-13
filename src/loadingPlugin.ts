@@ -39,6 +39,7 @@ export default function createLoading() {
           dispatch({ type: SHOW, payload: { actionType: action.type } });
           await next(action);
           dispatch({ type: HIDE, payload: { actionType: action.type } });
+          return;
         }
         return next(action);
       };

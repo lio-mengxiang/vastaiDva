@@ -131,5 +131,5 @@ const plugin = new Plugin();
 const VastaiDvaInstance = new VastaiDva(plugin);
 VastaiDvaInstance.plugin.use(loadingPlugin());
 
-export { IModel };
+export type { IModel, IAction };
 export default VastaiDvaInstance;
