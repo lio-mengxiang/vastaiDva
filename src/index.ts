@@ -4,6 +4,7 @@ import {
   combineReducers,
   Store,
   Middleware,
+  Dispatch,
 } from 'redux';
 import loadingPlugin from './loadingPlugin';
 import {
@@ -106,10 +107,20 @@ class VastaiDva {
   }
 
   asyncMiddeWare(): Middleware {
-    return ({ dispatch, getState }) => {
-      return (next) => async (action) => {
+    return ({
+      dispatch,
+      getState,
+    }: {
+      dispatch: Dispatch<IAction>;
+      getState: Store['getState'];
+    }) => {
+      return (next) => async (action: IAction) => {
         if (typeof this.effects[action.type] === 'function') {
-          return this.effects[action.type](action.data, dispatch, getState);
+          return this.effects[action.type](
+            action.payload,
+            dispatch,
+            getState()
+          );
         }
         return next(action);
       };
