@@ -1,7 +1,8 @@
 {
   "name": "vastai-dva",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A simple and lightweight and elm-style framework with minimal API and zero boilerplate",
+  "repository": "https://github.com/lio-mengxiang/vastaiDva.git",
   "keywords": [
     "dva",
     "mini dva",

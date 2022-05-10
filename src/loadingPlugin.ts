@@ -37,9 +37,9 @@ export default function createLoading() {
       return (next) => async (action) => {
         if (typeof effects[action.type] === 'function') {
           dispatch({ type: SHOW, payload: { actionType: action.type } });
-          await next(action);
+          const result = await next(action);
           dispatch({ type: HIDE, payload: { actionType: action.type } });
-          return;
+          return result;
         }
         return next(action);
       };
