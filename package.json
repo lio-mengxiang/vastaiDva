@@ -1,6 +1,6 @@
 {
   "name": "vastai-dva",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A simple and lightweight and elm-style framework with minimal API and zero boilerplate",
   "repository": "https://github.com/lio-mengxiang/vastaiDva.git",
   "keywords": [
@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "author": "1334196450@qq.com",
-  "main": "dist/js/index.js",
+  "main": "lib/js/index.js",
   "module": "esm/index.js",
   "typings": "types/index.d.ts",
   "files": [
@@ -26,7 +26,8 @@
     "build:types": "rimraf types && tsc --outDir types/index.d.ts -d --emitDeclarationOnly",
     "build:es": "rimraf esm && tsc --outDir ./esm --module ESNext --baseUrl ./src",
     "build:umd": "rimraf dist && mx buildLib --output-name index --mode umd",
-    "build": "yarn build:types && yarn build:es && yarn build:umd",
+    "build:cjs": "rimraf dist && mx buildLib --output-name index --mode cjs",
+    "build": "yarn build:types && yarn build:es && yarn build:umd && yarn build:cjs",
     "release": "ts-node ./scripts/release.ts"
   },
   "dependencies": {
