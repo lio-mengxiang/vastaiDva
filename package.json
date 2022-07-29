@@ -1,6 +1,6 @@
 {
   "name": "vastai-dva",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A simple and lightweight and elm-style framework with minimal API and zero boilerplate",
   "repository": "https://github.com/lio-mengxiang/vastaiDva.git",
   "keywords": [
@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "author": "1334196450@qq.com",
-  "main": "dist/index.js",
+  "main": "dist/js/index.js",
   "module": "esm/index.js",
   "typings": "types/index.d.ts",
   "files": [
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@mx-design/release": "2.2.27",
-    "@mx-design/cli": "1.0.19"
+    "@mx-design/cli": "1.0.35"
   },
   "browserslist": [
     "chrome 60",
